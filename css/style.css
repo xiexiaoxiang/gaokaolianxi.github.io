@@ -1,0 +1,237 @@
+/* ================================= 
+全局设置
+==================================== */
+
+html,
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+img,
+/*设定浏览器为无边框*/
+
+input {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+* {
+    /*    让内边距无法改变盒子模型的长宽*/
+    box-sizing: border-box;
+    /*    去除ul的小圆点*/
+    list-style: none;
+    /*    去除超链接的下划线*/
+    text-decoration: none;
+}
+
+/* ================================= 
+移动优先CSS规则
+==================================== */
+
+/*弹性导航条移动*/
+
+.wrap {
+    width: auto;
+    margin: 0px auto;
+
+}
+
+.main-header {
+    text-align: center;
+    border: 0px 1px solid #000;
+    /*添加阴影*/
+    box-shadow: 0 3px 20px #000;
+    /*设置导航条为毛玻璃效果*/
+    background-color: rgba(255, 250, 241, 0.6);
+    z-index: 1;
+}
+
+.main-header::before {
+    filter: blur(20px);
+    z-index: -1;
+}
+
+/*设置导航条为毛玻璃效果*/
+
+.logo {
+    /*重置log的外边距*/
+    margin: 0 0;
+}
+
+.logo a {
+    /*定位到 logo 的a标签*/
+    /*    pading ： 1em    0*/
+    /*改变logo的边距 上下   左右 */
+    padding: 1em 0;
+}
+
+.navlist li a:hover {
+    background-color: rgba(74, 74, 74, 0.5);
+    /*当鼠标移动到导航项目时改变背景颜色*/
+}
+
+.navlist li a {
+    /*定向到导航条上面边距*/
+    padding: 1em 0;
+    /*    改变那超链接的上下内边距*/
+}
+
+a {
+    /*    设置所有的标签为横向点击*/
+    display: block;
+
+}
+
+/*设定弹性导航栏*/
+
+footer {
+    background-color: dimgrey;
+    text-align: center;
+    padding: 1em 0;
+    color: white;
+}
+
+/*设定3个附文本框和一些特*/
+
+.col {
+    margin: 10px auto;
+    padding: 1em 0;
+    text-align: center;
+
+}
+
+.col:hover {
+    /*    添加阴影效果*/
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+    transform: scale(1.2);
+    /*渐变时间  */
+    cursor: default;
+}
+
+.mode1 {
+    background: url(../images/mode1.jpg);
+    background-size: cover;
+    color: aliceblue;
+    border-radius: 30px;
+}
+
+.mode2 {
+    background: url(../images/mode2.jpg);
+    background-size: cover;
+    background-size: cover;
+    color: red;
+    border-radius: 30px;
+}
+
+.mode3 {
+    background: url(../images/mode3.jpg);
+    background-size: cover;
+    color: greenyellow;
+    border-radius: 30px;
+}
+
+/*设定3个文本框和一些特性*/
+
+/*播放视频*/
+
+.bacground-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* 采用max-width可以在不同设备显示全部内容 */
+    min-height: 100%;
+    min-height: 100%;
+    z-index: -100;
+    /* 视频无法播放时，显示图片 */
+    transform: translateX(-50%)translateY(-50%);
+    /* 视频无法播放时，显示图片 */
+    background: url(../images/uc1.jpg) no-repeat;
+    /* 显示图片扩展全屏*/
+    background-size: cover;
+}
+
+/*播放视频*/
+
+/*内容2，3*/
+
+.class2 {
+    background-color: rgba(255, 250, 241, 0.6);
+    background: url(../images/mode2.jpg);
+    background-size: cover;
+    text-align: center;
+}
+
+.class3 {
+    background-color: rgba(255, 250, 241, 0.6);
+    background: url(../images/mode3.jpg);
+    background-size: cover;
+    text-align: center;
+    color: aliceblue;
+}
+
+/*文本*/
+.text{
+    margin: 10px auto;
+}
+
+/*内容2，3*/
+
+/*媒体查询  700px */
+
+@media (min-width:700px) {
+
+    /*弹性导航条*/
+    .main-header {
+        display: flex;
+        /*        弹性导航条*/
+        justify-content: space-around;
+        /*        调整主轴排列*/
+        align-items: center;
+        /*        调整副轴排列*/
+    }
+    .wrap {
+        /*将footer标签一直将在最下面*/
+        min-height: calc(100vh - 54px);
+    }
+    .navlist {
+        display: flex;
+    }
+    .navlist li a {
+        padding: 1em 2em;
+    }
+
+    .container {
+        display: flex;
+        width: 85%;
+        margin: auto;
+
+        /*        居中*/
+    }
+    .col {
+        margin: 0 0.5em;
+        flex-basis: 30%;
+        flex-grow: 1;
+    }
+    .col h1 {
+        padding: 0 1em;
+        /*        添加内边距*/
+    }
+
+    /*弹性导航条 */
+    .mode {
+        margin: 0 0.5em;
+        flex-basis: 30%;
+        flex-grow: 1;
+        display: flex;
+        width: 85%;
+        margin: auto;
+    }
+}
