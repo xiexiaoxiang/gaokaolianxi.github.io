@@ -119,7 +119,7 @@ footer {
 .mode1 {
     background: url(../images/mode1.jpg);
     background-size: cover;
-    color: aliceblue;
+    color: blue;
     border-radius: 30px;
 }
 
@@ -134,7 +134,7 @@ footer {
 .mode3 {
     background: url(../images/mode3.jpg);
     background-size: cover;
-    color: greenyellow;
+    color: green;
     border-radius: 30px;
 }
 
@@ -142,7 +142,7 @@ footer {
 
 /*播放视频*/
 
-.bacground-video {
+.bacground {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -150,10 +150,8 @@ footer {
     min-height: 100%;
     min-height: 100%;
     z-index: -100;
-    /* 视频无法播放时，显示图片 */
     transform: translateX(-50%)translateY(-50%);
-    /* 视频无法播放时，显示图片 */
-    background: url(../images/uc1.jpg) no-repeat;
+    background: url(../images/biye.jpg) ;
     /* 显示图片扩展全屏*/
     background-size: cover;
 }
@@ -164,17 +162,9 @@ footer {
 
 .class2 {
     background-color: rgba(255, 250, 241, 0.6);
-    background: url(../images/mode2.jpg);
+    background: url(../images/jiayou.jpg);
     background-size: cover;
     text-align: center;
-}
-
-.class3 {
-    background-color: rgba(255, 250, 241, 0.6);
-    background: url(../images/mode3.jpg);
-    background-size: cover;
-    text-align: center;
-    color: aliceblue;
 }
 
 /*文本*/
